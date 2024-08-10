@@ -3,6 +3,7 @@ const counterElement = document.getElementById('counter');
 const loveMessageElement = document.getElementById('love-message');
 const specialImage = document.getElementById('special-image');
 
+// Función para crear faroles
 function createLantern() {
     const lantern = document.createElement('div');
     lantern.classList.add('lantern');
@@ -18,8 +19,10 @@ function createLantern() {
     }, 10000); // Los faroles se eliminan después de 10s
 }
 
+// Intervalo para crear faroles
 setInterval(createLantern, 150); // 150 ms entre cada farol
 
+// Lógica del botón
 document.getElementById('love-button').addEventListener('click', function() {
     let count = 0;
 
@@ -42,6 +45,7 @@ document.getElementById('love-button').addEventListener('click', function() {
     }, 5000); // 5 segundos
 });
 
+// Reproduce el audio cuando se carga la página
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('background-music');
     
