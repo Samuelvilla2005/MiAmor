@@ -70,7 +70,7 @@ p {
 #love-button {
     padding: 10px 20px;
     font-size: 1.5em;
-    background-color: #ff69b4;
+    background-color: #d33e3e;
     color: white;
     border: none;
     border-radius: 10px;
@@ -80,14 +80,14 @@ p {
 }
 
 #love-button:hover {
-    background-color: #ff1493;
+    background-color: #fd0000;
 }
 
 #counter {
-    color: #ff69b4;
+    color: #ffffff;
 }
 
 #love-message {
-    color: #ff1493;
+    color: #ffffff;
 }
 
