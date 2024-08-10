@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #10031a; /* Fondo oscuro como en la escena */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.lantern-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.lantern {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: radial-gradient(circle at top, #ffdd99, #cc3300);
+    border-radius: 20% 20% 0 0;
+    box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
+    animation: floatUp linear infinite;
+}
+
+.lantern:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #ffdd99, #cc3300);
+    border-radius: 20% 20% 0 0;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 1;
+    }
+}
+
+#love-button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#love-button:hover {
+    background-color: #ff1493;
+}
+
+#counter {
+    color: #ff69b4;
+}
+
+#love-message {
+    color: #ff1493;
+}
+
