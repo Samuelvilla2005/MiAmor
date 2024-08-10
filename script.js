@@ -3,6 +3,7 @@ const counterElement = document.getElementById('counter');
 const loveMessageElement = document.getElementById('love-message');
 const specialImage = document.getElementById('special-image');
 const playMusicButton = document.getElementById('play-music-button');
+const loveButton = document.getElementById('love-button');
 const audio = document.getElementById('background-music');
 
 // Función para crear faroles
@@ -24,8 +25,20 @@ function createLantern() {
 // Intervalo para crear faroles
 setInterval(createLantern, 150); // 150 ms entre cada farol
 
+// Lógica del botón de reproducir música
+playMusicButton.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play().catch(function(error) {
+            console.log('Error al intentar reproducir el audio:', error);
+        });
+    }
+    // Mostrar el botón de amor después de reproducir la música
+    loveButton.style.display = 'block';
+    playMusicButton.style.display = 'none'; // Opcional: ocultar el botón de música después de hacer clic
+});
+
 // Lógica del botón de amor
-document.getElementById('love-button').addEventListener('click', function() {
+loveButton.addEventListener('click', function() {
     let count = 0;
 
     // Mostrar el contador
@@ -45,14 +58,4 @@ document.getElementById('love-button').addEventListener('click', function() {
         loveMessageElement.textContent = "Eres mi sueño hecho realidad. - Enredados";
         specialImage.style.display = 'block'; // Muestra la imagen
     }, 5000); // 5 segundos
-});
-
-// Lógica del botón de reproducir música
-playMusicButton.addEventListener('click', function() {
-    // Reproduce el audio si no está ya en reproducción
-    if (audio.paused) {
-        audio.play().catch(function(error) {
-            console.log('Error al intentar reproducir el audio:', error);
-        });
-    }
 });
