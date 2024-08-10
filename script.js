@@ -2,6 +2,8 @@ const lanternContainer = document.querySelector('.lantern-container');
 const counterElement = document.getElementById('counter');
 const loveMessageElement = document.getElementById('love-message');
 const specialImage = document.getElementById('special-image');
+const playMusicButton = document.getElementById('play-music-button');
+const audio = document.getElementById('background-music');
 
 // Función para crear faroles
 function createLantern() {
@@ -22,7 +24,7 @@ function createLantern() {
 // Intervalo para crear faroles
 setInterval(createLantern, 150); // 150 ms entre cada farol
 
-// Lógica del botón
+// Lógica del botón de amor
 document.getElementById('love-button').addEventListener('click', function() {
     let count = 0;
 
@@ -45,12 +47,12 @@ document.getElementById('love-button').addEventListener('click', function() {
     }, 5000); // 5 segundos
 });
 
-// Reproduce el audio cuando se carga la página
-document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.getElementById('background-music');
-    
-    // Intenta reproducir el audio cuando se carga la página
-    audio.play().catch(function(error) {
-        console.log('Error al intentar reproducir el audio:', error);
-    });
+// Lógica del botón de reproducir música
+playMusicButton.addEventListener('click', function() {
+    // Reproduce el audio si no está ya en reproducción
+    if (audio.paused) {
+        audio.play().catch(function(error) {
+            console.log('Error al intentar reproducir el audio:', error);
+        });
+    }
 });

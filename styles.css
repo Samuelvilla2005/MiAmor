@@ -67,7 +67,7 @@ p {
     }
 }
 
-#love-button {
+.action-button {
     padding: 10px 20px;
     font-size: 1.5em;
     background-color: #d33e3e;
@@ -77,9 +77,10 @@ p {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    margin: 10px; /* Añadido para separación entre botones */
 }
 
-#love-button:hover {
+.action-button:hover {
     background-color: #fd0000;
 }
 
@@ -90,4 +91,3 @@ p {
 #love-message {
     color: #ffffff;
 }
-

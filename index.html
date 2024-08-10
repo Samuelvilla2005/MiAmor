@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <audio id="background-music" autoplay loop>
+    <audio id="background-music" loop>
         <source src="Music/Song.mp3" type="audio/mp3">
         Tu navegador no soporta la reproducción de audio.
     </audio>
     <div class="lantern-container"></div>
     <div class="content">
-        <button id="love-button">¿Sabes cuánto te amo?</button>
+        <button id="love-button" class="action-button">¿Sabes cuánto te amo?</button>
+        <button id="play-music-button" class="action-button">Reproducir música de fondo</button>
         <div id="counter" style="display: none; font-size: 2em; margin-top: 20px;"></div>
         <div id="love-message" style="display: none; font-size: 1.5em; margin-top: 20px;"></div>
         <center><img id="special-image" src="Img/hola2.jpg" alt="Mensaje de Amor" style="display: none; width: 300px; margin-top: 20px;"></center>
@@ -21,4 +22,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
